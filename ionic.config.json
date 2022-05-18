@@ -1,5 +1,7 @@
 {
   "name": "Etapa3_PPF_E",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

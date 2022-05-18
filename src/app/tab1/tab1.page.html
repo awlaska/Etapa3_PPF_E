@@ -1,28 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Pesquisa
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align:center">TugaKidsClothes</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/p-inicial" text="" icon="home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-menu side="start" type="push" contentId="menuContent">
-    <ion-header>
-      <ion-toolbar color="danger">
-        <ion-title>End Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+<ion-content fullscreen class="ion-padding">
+  <ion-button expand="block" routerLink="/exemplo" routerDirection="forward">
+    Ionic
+  </ion-button>
 </ion-content>
-
-<ion-router-outlet id="menuContent"></ion-router-outlet>
