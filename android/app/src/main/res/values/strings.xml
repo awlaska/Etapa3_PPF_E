@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">TugaKidsClothes</string>
+    <string name="title_activity_main">TugaKidsClothes</string>
+    <string name="package_name">pt.AlexAlaska.tpihm</string>
+    <string name="custom_url_scheme">pt.AlexAlaska.tpihm</string>
+</resources>
