@@ -22,6 +22,14 @@ const routes: Routes = [
     path: 'calca',
     loadChildren: () => import('./calca/calca.module').then( m => m.CalcaPageModule)
   },
+  {
+    path: 'sapato',
+    loadChildren: () => import('./sapato/sapato.module').then( m => m.SapatoPageModule)
+  },
+  {
+    path: 'acessorio',
+    loadChildren: () => import('./acessorio/acessorio.module').then( m => m.AcessorioPageModule)
+  },
 
 ];
 @NgModule({

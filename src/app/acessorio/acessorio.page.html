@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)='goBack()' defaultHref="goBack()"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align:center">Acessórios</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/tabs/p-inicial" text="" icon="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- filtros ainda tem de ser implementados -->
+  <ion-button (click)="abrirFiltros()">
+    <ion-icon name="filter"></ion-icon>
+    <ion-label>Filtros</ion-label>
+  </ion-button>
+
+  <ion-card *ngIf="infoAcessorio">
+    <img src="./assets/acessorio/{{ infoAcessorio.img }}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{ infoAcessorio.preco }}</ion-card-subtitle>
+      <ion-card-title>{{ infoAcessorio.nome }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item-divider>
+        <!-- Não estão funcionais ainda -->
+      <ion-buttons slot="end">
+        <ion-icon name="heart-outline" slot="end"></ion-icon>
+        <ion-icon name="cart" slot="end"></ion-icon>
+      </ion-buttons>
+      </ion-item-divider>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
