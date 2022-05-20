@@ -79,7 +79,7 @@ export class Tab1Page {
         let infoDoSapato: NavigationExtras;
         infoDoSapato = {
            state: {
-            dataSapato: this.dataSapato[categoriakey]
+            dadosSapato: this.dataSapato[categoriakey]
            }
          }
          // Utilização de Extras State (novo desde o Angular 7.2)
