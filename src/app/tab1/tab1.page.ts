@@ -10,7 +10,7 @@ import { Router, NavigationExtras } from '@angular/router';
 export class Tab1Page {
   
   private dataCamisola: any;
-
+  private dataCalca: any;
   goBack() {
     this.navCtrl.back();
   }
@@ -20,23 +20,41 @@ export class Tab1Page {
     this.dataCamisola = {
       "camisola": {
           "id": "1",
-          "title": "Camisola Laranja",
-          "imdb_rating": "7.0",
-          "release_year": "1995",
+          "nome": "Camisola Laranja",
+          "preco": "9.99€",
           "img": "camisolaLaranja.jpg"
+        },
+    }
+    this.dataCalca = {
+      "calca": {
+          "id": "1",
+          "nome": "Calça Preta",
+          "preco": "9.99€",
+          "img": "calcaPreta.jpg"
         },
     }
   }
 
-  public verCategoria (camisolakey: string) {
-    let infoDaCamisola: NavigationExtras;
-    infoDaCamisola = {
-      state: {
-        dadosCamisola: this.dataCamisola[camisolakey]
+  public verCategoria (categoriakey: string) {
+    if (categoriakey == 'camisola'){
+      let infoDaCamisola: NavigationExtras;
+        infoDaCamisola = {
+          state: {
+            dadosCamisola: this.dataCamisola[categoriakey]
+          }
+        }
+        // Utilização de Extras State (novo desde o Angular 7.2)
+        this.router.navigate(['camisola'], infoDaCamisola);
+    }else if (categoriakey == 'calca'){
+        let infoDaCalaca: NavigationExtras;
+        infoDaCalaca = {
+           state: {
+             dadosCalca: this.dataCalca[categoriakey]
+           }
+         }
+         // Utilização de Extras State (novo desde o Angular 7.2)
+        this.router.navigate(['calca'], infoDaCalaca);
       }
-    }
-    // Utilização de Extras State (novo desde o Angular 7.2)
-    this.router.navigate(['camisola'], infoDaCamisola);
   }
 
 

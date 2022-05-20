@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'camisola',
     loadChildren: () => import('./camisola/camisola.module').then( m => m.CamisolaPageModule)
   },
+  {
+    path: 'calca',
+    loadChildren: () => import('./calca/calca.module').then( m => m.CalcaPageModule)
+  },
 
 ];
 @NgModule({

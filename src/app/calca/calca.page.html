@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button (click)='goBack()' defaultHref="goBack()"></ion-back-button>
     </ion-buttons>
-    <ion-title style="text-align:center">Camisolas</ion-title>
+    <ion-title style="text-align:center">Calças e calções</ion-title>
     <ion-buttons slot="end">
       <ion-back-button defaultHref="/tabs/p-inicial" text="" icon="home"></ion-back-button>
     </ion-buttons>
@@ -17,11 +17,11 @@
     <ion-label>Filtros</ion-label>
   </ion-button>
 
-  <ion-card *ngIf="infoCamisola">
-    <img src="./assets/camisola/{{ infoCamisola.img }}" />
+  <ion-card *ngIf="infoCalca">
+    <img src="./assets/calca/{{ infoCalca.img }}" />
     <ion-card-header>
-      <ion-card-subtitle>{{ infoCamisola.preco }}</ion-card-subtitle>
-      <ion-card-title>{{ infoCamisola.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ infoCalca.preco }}</ion-card-subtitle>
+      <ion-card-title>{{ infoCalca.nome }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-item-divider>
