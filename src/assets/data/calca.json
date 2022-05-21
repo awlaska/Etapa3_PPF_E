@@ -1,0 +1,8 @@
+{
+"calca": {
+    "id": "1",
+    "nome": "Calça Preta",
+    "preco": "9.99€",
+    "img": "./assets/calca/calcaPreta.jpg"
+    }
+}

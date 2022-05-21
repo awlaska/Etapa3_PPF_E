@@ -17,11 +17,11 @@
     <ion-label>Filtros</ion-label>
   </ion-button>
 
-  <ion-card *ngIf="infoCamisola">
-    <img src="./assets/camisola/{{ infoCamisola.img }}" />
+  <ion-card *ngFor="let camisola of dataCamisola | keyvalue" >
+    <img [src]="camisola.value.img">
     <ion-card-header>
-      <ion-card-subtitle>{{ infoCamisola.preco }}</ion-card-subtitle>
-      <ion-card-title>{{ infoCamisola.nome }}</ion-card-title>
+      <ion-card-title>{{ camisola.value.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ camisola.value.preco }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       <ion-item-divider>

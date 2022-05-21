@@ -8,19 +8,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AcessorioPage implements OnInit {
 
-  public infoAcessorio: any;
+  constructor( private router: Router ) {}
 
-  constructor(private router: Router, private rotaAtiva: ActivatedRoute) {
-
-   this.rotaAtiva.queryParams.subscribe(params => {
-     if (this.router.getCurrentNavigation().extras.state) {
-       this.infoAcessorio = this.router.getCurrentNavigation().extras.state.dadosAcessorio;
-       console.log(this.infoAcessorio);
-     }
-   })
-  }
-
+  public dataAcessorio: any;
+  
   ngOnInit() {
+    fetch('./assets/data/acessorio.json')
+      .then(res => res.json())
+      .then(json => {
+        this.dataAcessorio = json;
+      });
   }
-
 }

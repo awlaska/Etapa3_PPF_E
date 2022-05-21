@@ -17,11 +17,11 @@
     <ion-label>Filtros</ion-label>
   </ion-button>
 
-  <ion-card *ngIf="infoSapato">
-    <img src="./assets/sapato/{{ infoSapato.img }}" />
+  <ion-card *ngFor="let sapato of dataSapato | keyvalue" >
+    <img [src]="sapato.value.img">
     <ion-card-header>
-      <ion-card-subtitle>{{ infoSapato.preco }}</ion-card-subtitle>
-      <ion-card-title>{{ infoSapato.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ sapato.value.preco }}</ion-card-subtitle>
+      <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-item-divider>

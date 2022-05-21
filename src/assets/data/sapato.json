@@ -1,0 +1,8 @@
+{
+"sapato": {
+    "id": "1",
+    "nome": "Vans Old Skool Pretas",
+    "preco": "39.99€",
+    "img": "./assets/sapato/sapatoPreto.jpg"
+    }
+}

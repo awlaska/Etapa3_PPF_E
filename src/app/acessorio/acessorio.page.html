@@ -17,11 +17,11 @@
     <ion-label>Filtros</ion-label>
   </ion-button>
 
-  <ion-card *ngIf="infoAcessorio">
-    <img src="./assets/acessorio/{{ infoAcessorio.img }}" />
+  <ion-card *ngFor="let acessorio of dataAcessorio | keyvalue" >
+    <img [src]="acessorio.value.img">
     <ion-card-header>
-      <ion-card-subtitle>{{ infoAcessorio.preco }}</ion-card-subtitle>
-      <ion-card-title>{{ infoAcessorio.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ acessorio.value.preco }}</ion-card-subtitle>
+      <ion-card-title>{{ acessorio.value.nome }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-item-divider>

@@ -8,19 +8,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CalcaPage implements OnInit {
 
-  public infoCalca: any;
+  constructor( private router: Router ) {}
 
-  constructor(private router: Router, private rotaAtiva: ActivatedRoute) {
-
-   this.rotaAtiva.queryParams.subscribe(params => {
-     if (this.router.getCurrentNavigation().extras.state) {
-       this.infoCalca = this.router.getCurrentNavigation().extras.state.dadosCalca;
-       console.log(this.infoCalca);
-     }
-   })
-  }
-
+  public dataCalca: any;
+  
   ngOnInit() {
+    fetch('./assets/data/calca.json')
+      .then(res => res.json())
+      .then(json => {
+        this.dataCalca = json;
+      });
   }
-
 }
+

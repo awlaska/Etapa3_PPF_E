@@ -1,0 +1,8 @@
+{
+"acessorio": {
+    "id": "1",
+    "nome": "Anel",
+    "preco": "2.99€",
+    "img": "./assets/acessorio/anel1.jpg"
+    }
+}

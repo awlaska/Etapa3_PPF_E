@@ -1,0 +1,14 @@
+{
+"camisola1": {
+    "id": "1",
+    "nome": "Camisola Laranja",
+    "preco": "9.99€",
+    "img": "./assets/camisola/camisolaLaranja.jpg"
+},
+"camisola2": {
+    "id": "2",
+    "nome": "Camisola Verde",
+    "preco": "8.99€",
+    "img": "./assets/camisola/camisolaVerde.jpg"
+}
+}

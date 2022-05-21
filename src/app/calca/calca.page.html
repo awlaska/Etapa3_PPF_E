@@ -17,11 +17,11 @@
     <ion-label>Filtros</ion-label>
   </ion-button>
 
-  <ion-card *ngIf="infoCalca">
-    <img src="./assets/calca/{{ infoCalca.img }}" />
+  <ion-card *ngFor="let calca of dataCalca | keyvalue" >
+    <img [src]="calca.value.img" >
     <ion-card-header>
-      <ion-card-subtitle>{{ infoCalca.preco }}</ion-card-subtitle>
-      <ion-card-title>{{ infoCalca.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ calca.value.preco }}</ion-card-subtitle>
+      <ion-card-title>{{ calca.value.nome }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-item-divider>

@@ -8,19 +8,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SapatoPage implements OnInit {
 
-  public infoSapato: any;
+  constructor( private router: Router ) {}
 
-  constructor(private router: Router, private rotaAtiva: ActivatedRoute) {
-
-   this.rotaAtiva.queryParams.subscribe(params => {
-     if (this.router.getCurrentNavigation().extras.state) {
-       this.infoSapato = this.router.getCurrentNavigation().extras.state.dadosSapato;
-       console.log(this.infoSapato);
-     }
-   })
-  }
-
+  public dataSapato: any;
+  
   ngOnInit() {
+    fetch('./assets/data/sapato.json')
+      .then(res => res.json())
+      .then(json => {
+        this.dataSapato = json;
+      });
   }
-
 }
