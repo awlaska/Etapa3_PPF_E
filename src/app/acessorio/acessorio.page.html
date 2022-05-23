@@ -1,11 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button (click)='goBack()' defaultHref="goBack()"></ion-back-button>
+      <ion-back-button (click)='goBack()' defaultHref="/tabs/p-inicial"></ion-back-button>
     </ion-buttons>
     <ion-title style="text-align:center">Acessórios</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>  
   <center><div>
 <!-- filtros ainda tem de ser implementados -->
@@ -18,8 +19,8 @@
     <ion-card style="display: inline-block; width: 40%;" *ngFor="let acessorio of dataAcessorio | keyvalue" >
       <img [src]="acessorio.value.img">
       <ion-card-header>
-        <ion-card-subtitle>{{ acessorio.value.preco }}</ion-card-subtitle>
         <ion-card-title>{{ acessorio.value.nome }}</ion-card-title>
+        <ion-card-subtitle>{{ acessorio.value.preco }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <ion-item-divider>

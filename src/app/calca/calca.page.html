@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button (click)='goBack()' defaultHref="goBack()"></ion-back-button>
+      <ion-back-button (click)='goBack()' defaultHref="/tabs/p-inicial"></ion-back-button>
     </ion-buttons>
     <ion-title style="text-align:center">Calças e calções</ion-title>
   </ion-toolbar>
@@ -19,8 +19,8 @@
     <ion-card style="display: inline-block; width: 40%;" *ngFor="let calca of dataCalca | keyvalue" >
       <img [src]="calca.value.img" >
       <ion-card-header>
-        <ion-card-subtitle>{{ calca.value.preco }}</ion-card-subtitle>
         <ion-card-title>{{ calca.value.nome }}</ion-card-title>
+        <ion-card-subtitle>{{ calca.value.preco }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <ion-item-divider>

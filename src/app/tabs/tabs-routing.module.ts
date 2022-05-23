@@ -27,10 +27,7 @@ const routes: Routes = [
         path: 'tab4',
         loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
       },
-      {
-        path: 'camisola',
-        loadChildren: () => import('../camisola/camisola.module').then(m => m.CamisolaPageModule)
-      },
+
       {
         path: '',
         redirectTo: '/tabs/tab1',
