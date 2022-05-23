@@ -11,27 +11,29 @@
 </ion-header>
 
 <ion-content>
-<!-- filtros ainda tem de ser implementados -->
-  <ion-button (click)="abrirFiltros()">
-    <ion-icon name="filter"></ion-icon>
-    <ion-label>Filtros</ion-label>
-  </ion-button>
-<center>
-  <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of dataSapato | keyvalue" >
-    <img [src]="sapato.value.img">
-    <ion-card-header>
-      <ion-card-subtitle>{{ sapato.value.preco }}</ion-card-subtitle>
-      <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-item-divider>
-        <!-- Não estão funcionais ainda -->
-      <ion-buttons slot="end">
-        <ion-icon name="heart-outline" slot="end"></ion-icon>
-        <ion-icon name="cart" slot="end"></ion-icon>
-      </ion-buttons>
-      </ion-item-divider>
-    </ion-card-content>
-  </ion-card>
-</center>
+  <center><div>
+    <!-- filtros ainda tem de ser implementados -->
+    <ion-button (click)="abrirFiltros()">
+      <ion-icon name="filter"></ion-icon>
+      <ion-label>Filtros</ion-label>
+    </ion-button>
+  </div></center>
+  <center><div>
+    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of dataSapato | keyvalue" >
+      <img [src]="sapato.value.img">
+      <ion-card-header>
+        <ion-card-subtitle>{{ sapato.value.preco }}</ion-card-subtitle>
+        <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item-divider>
+          <!-- Não estão funcionais ainda -->
+        <ion-buttons slot="end">
+          <ion-icon name="heart-outline" slot="end"></ion-icon>
+          <ion-icon name="cart" slot="end"></ion-icon>
+        </ion-buttons>
+        </ion-item-divider>
+      </ion-card-content>
+    </ion-card>
+  </div></center>
 </ion-content>

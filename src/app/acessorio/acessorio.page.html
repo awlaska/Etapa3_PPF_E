@@ -9,14 +9,14 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
+<ion-content>  
+  <center>
 <!-- filtros ainda tem de ser implementados -->
   <ion-button (click)="abrirFiltros()">
     <ion-icon name="filter"></ion-icon>
     <ion-label>Filtros</ion-label>
   </ion-button>
-  <center>
+
     <ion-card style="display: inline-block; width: 40%;" *ngFor="let acessorio of dataAcessorio | keyvalue" >
       <img [src]="acessorio.value.img">
       <ion-card-header>
