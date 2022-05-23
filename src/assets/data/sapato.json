@@ -1,40 +1,38 @@
 {
-    "sapato": [
-        {
-            "id": "1",
-            "nome": "Vans Old Skool",
-            "preco": "59.99€",
-            "img": "./assets/sapato/sapatoPreto.jpg",
-            "tipo": "Skate",
-            "marca": "Vans",
-            "cor": "Preto"
-        },
-        {
-            "id": "2",
-            "nome": "Adidas Superstar",
-            "preco": "49.99€",
-            "img": "./assets/sapato/sapatoAdidas.jpg",
-            "tipo": "Casual",
-            "marca": "Adidas",
-            "cor": "Branco"
-        },
-        {
-            "id": "3",
-            "nome": "Nike Dunk High",
-            "preco": "69.99€",
-            "img": "./assets/sapato/sapatoNike.jpg",
-            "tipo": "Basketball",
-            "marca": "Nike",
-            "cor": "Preto, Vermelho"
-        },
-        {
-            "id": "4",
-            "nome": "Reebok Running",
-            "preco": "39.99€",
-            "img": "./assets/sapato/sapatoReebok.jpg",
-            "tipo": "Casual",
-            "marca": "Reebok",
-            "cor": "Branco"
-        }
-    ]
+"sapato1": {
+    "id": "1",
+    "nome": "Vans Old Skool",
+    "preco": "59.99€",
+    "img": "./assets/sapato/sapatoPreto.jpg",
+    "tipo": "Skate",
+    "marca": "Vans",
+    "cor": "Preto"
+    },
+"sapato2": {
+    "id": "2",
+    "nome": "Adidas Superstar",
+    "preco": "49.99€",
+    "img": "./assets/sapato/sapatoAdidas.jpg",
+    "tipo": "Casual",
+    "marca": "Adidas",
+    "cor": "Branco"
+    },
+"sapato3": {
+    "id": "3",
+    "nome": "Nike Dunk High",
+    "preco": "69.99€",
+    "img": "./assets/sapato/sapatoNike.jpg",
+    "tipo": "Basketball",
+    "marca": "Nike",
+    "cor": "Preto, Vermelho"
+    },
+"sapato4": {
+    "id": "4",
+    "nome": "Reebok Running",
+    "preco": "39.99€",
+    "img": "./assets/sapato/sapatoReebok.jpg",
+    "tipo": "Casual",
+    "marca": "Reebok",
+    "cor": "Branco"
+    }
 }
