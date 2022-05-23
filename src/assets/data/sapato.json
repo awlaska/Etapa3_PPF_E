@@ -1,8 +1,26 @@
 {
-"sapato": {
+"sapato1": {
     "id": "1",
     "nome": "Vans Old Skool Pretas",
     "preco": "39.99€",
-    "img": "./assets/sapato/sapatoPreto.jpg"
+    "img": "./assets/sapato/sapatoPreto.jpg" 
+    },
+"sapato2": {
+    "id": "1",
+    "nome": "Vans Old Skool Pretas",
+    "preco": "39.99€",
+    "img": "./assets/sapato/sapatoAdidas.jpg"
+    },
+"sapato3": {
+    "id": "1",
+    "nome": "Vans Old Skool Pretas",
+    "preco": "39.99€",
+    "img": "./assets/sapato/sapatoNike.jpg"
+    },
+"sapato4": {
+    "id": "1",
+    "nome": "Vans Old Skool Pretas",
+    "preco": "39.99€",
+    "img": "./assets/sapato/sapatoRebook.jpg"
     }
 }
