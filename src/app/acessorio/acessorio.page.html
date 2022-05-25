@@ -6,7 +6,6 @@
     <ion-title style="text-align:center">Acessórios</ion-title>
   </ion-toolbar>
 </ion-header>
-<<<<<<< Updated upstream
 
 <ion-content>
   <!-- filtros ainda tem de ser implementados -->
@@ -30,32 +29,4 @@
     </ion-card-content>
   </ion-card>
 </div></center>
-=======
-<ion-content>  
-  <center><div>
-<!-- filtros ainda tem de ser implementados -->
-  <ion-button (click)="abrirFiltros()">
-    <ion-icon name="filter"></ion-icon>
-    <ion-label>Filtros</ion-label>
-  </ion-button>
-  </div></center>
-  <center><div>
-    <ion-card style="display: inline-block; width: 40%;" *ngFor="let acessorio of dataAcessorio | keyvalue" >
-      <img [src]="acessorio.value.img">
-      <ion-card-header>
-        <ion-card-subtitle>{{ acessorio.value.preco }}</ion-card-subtitle>
-        <ion-card-title>{{ acessorio.value.nome }}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item-divider>
-          <!-- Não estão funcionais ainda -->
-        <ion-buttons slot="end">
-          <ion-icon name="heart-outline" slot="end"></ion-icon>
-          <ion-icon name="cart" slot="end"></ion-icon>
-        </ion-buttons>
-        </ion-item-divider>
-      </ion-card-content>
-    </ion-card>
-  </div></center>
->>>>>>> Stashed changes
 </ion-content>
