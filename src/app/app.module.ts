@@ -6,11 +6,9 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SeleclojaPipe } from './compra/selecloja.pipe';
-import { FinalizarPipe } from './compra/finalizar.pipe';
 
 @NgModule({
-  declarations: [AppComponent, SeleclojaPipe, FinalizarPipe],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
