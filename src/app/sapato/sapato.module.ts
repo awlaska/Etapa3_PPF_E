@@ -8,12 +8,15 @@ import { SapatoPageRoutingModule } from './sapato-routing.module';
 
 import { SapatoPage } from './sapato.page';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SapatoPageRoutingModule
+    SapatoPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [SapatoPage]
 })

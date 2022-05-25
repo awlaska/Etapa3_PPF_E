@@ -10,6 +10,7 @@ import { ProdutosService } from '../services/produtos.service';
 export class SapatoPage implements OnInit {
 
   public sapatos: any;
+  searchTerm: string;
 
   constructor( public sapatoServ: ProdutosService ) {}
   
