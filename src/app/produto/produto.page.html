@@ -31,4 +31,26 @@
     </ion-card-content>
   </ion-card>
   
+  <ion-card *ngIf="acessorio">
+    <ion-card-header>
+      <ion-card-subtitle>{{ acessorio.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ acessorio.nome }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ acessorio.preco }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="calca">
+    <ion-card-header>
+      <ion-card-subtitle>{{ calca.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ calca.nome }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ calca.preco }}
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
