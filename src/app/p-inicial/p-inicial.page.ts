@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProdutosService } from '../services/produtos.service';
+
 
 @Component({
   selector: 'app-p-inicial',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PInicialPage implements OnInit {
 
-  constructor() { }
+  constructor( public sapatoServ: ProdutosService ) { }
 
+  public sapatos: any;
+  searchTerm: string;
+  
   ngOnInit() {
+    this.sapatoServ.getSapatos().subscribe(data => {
+      this.sapatos = data;
+    });
+  }
+
+  verSapato(marca: string, rota: string) {
+    this.sapatoServ.goToRotaSapato(marca, rota);
   }
 
 }

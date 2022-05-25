@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar fullscreen class="ion-padding"></ion-searchbar>
+  <ion-searchbar placeholder="Pesquisa" [(ngModel)]="searchTerm" showCancelButton="focus" animated></ion-searchbar>
 
   <ion-slides color="dark" #slider pager="true" [options]="slideOpts" (ionSlideDidChange)='ionSlideDidChange()'>
     <ion-slide>
@@ -21,4 +21,54 @@
       <img src="assets/sapato/sapatoNike.jpg" style="width:60%;">
     </ion-slide>
   </ion-slides>
+
+  <center><div>
+    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of sapatos | keyvalue | filter:searchTerm" button (onclick)="verSapato(sapato.key, 'sapato')">
+      <img [src]="sapato.value.img">
+      <ion-card-header (click)="verSapato(sapato.key, 'produto')">
+        <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
+        <ion-card-subtitle>{{ sapato.value.preco }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-button (click)="verSapato(sapato.key, 'tab3')"><ion-icon name="heart-outline"></ion-icon></ion-button>
+          <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of sapatos | keyvalue | filter:searchTerm" button (onclick)="verSapato(sapato.key, 'sapato')">
+      <img [src]="camisola.value.img">
+      <ion-card-header (click)="verSapato(sapato.key, 'produto')">
+        <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
+        <ion-card-subtitle>{{ sapato.value.preco }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-button (click)="verSapato(sapato.key, 'tab3')"><ion-icon name="heart-outline"></ion-icon></ion-button>
+          <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of sapatos | keyvalue | filter:searchTerm" button (onclick)="verSapato(sapato.key, 'sapato')">
+      <img [src]="anel.value.img">
+      <ion-card-header (click)="verSapato(sapato.key, 'produto')">
+        <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
+        <ion-card-subtitle>{{ sapato.value.preco }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-button (click)="verSapato(sapato.key, 'tab3')"><ion-icon name="heart-outline"></ion-icon></ion-button>
+          <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of sapatos | keyvalue | filter:searchTerm" button (onclick)="verSapato(sapato.key, 'sapato')">
+      <img [src]="sapato.value.img">
+      <ion-card-header (click)="verSapato(sapato.key, 'produto')">
+        <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
+        <ion-card-subtitle>{{ sapato.value.preco }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-button (click)="verSapato(sapato.key, 'tab3')"><ion-icon name="heart-outline"></ion-icon></ion-button>
+          <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div></center>
 </ion-content>

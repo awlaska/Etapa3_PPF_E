@@ -8,12 +8,15 @@ import { PInicialPageRoutingModule } from './p-inicial-routing.module';
 
 import { PInicialPage } from './p-inicial.page';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PInicialPageRoutingModule
+    PInicialPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [PInicialPage]
 })
