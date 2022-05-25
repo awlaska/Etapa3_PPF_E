@@ -12,5 +12,14 @@
 
 <ion-content>
   <ion-searchbar fullscreen class="ion-padding"></ion-searchbar>
-  <h1 style="text-align:center">Página com produtos desejados</h1>
+  <ion-card *ngIf="sapato">
+    <ion-card-header>
+      <ion-card-subtitle>{{ sapato.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ sapato.nome }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ sapato.preco }}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

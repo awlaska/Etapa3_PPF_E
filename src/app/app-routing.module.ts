@@ -7,6 +7,14 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
+    path: 'tab2',
+    loadChildren: () => import('./tab2/tab2.module').then( m => m.Tab2PageModule)
+  },
+  {
+    path: 'tab3',
+    loadChildren: () => import('./tab3/tab3.module').then( m => m.Tab3PageModule)
+  },
+  {
     path: 'tab4',
     loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
   },
@@ -30,6 +38,19 @@ const routes: Routes = [
     path: 'acessorio',
     loadChildren: () => import('./acessorio/acessorio.module').then( m => m.AcessorioPageModule)
   },
+  {
+    path: 'produto',
+    loadChildren: () => import('./produto/produto.module').then( m => m.ProdutoPageModule)
+  },  {
+    path: 'finalizar',
+    loadChildren: () => import('./compra/finalizar/finalizar/finalizar.module').then( m => m.FinalizarPageModule)
+  },
+  {
+    path: 'selecloja',
+    loadChildren: () => import('./compra/selecloja/selecloja/selecloja.module').then( m => m.SeleclojaPageModule)
+  },
+
+
 
 ];
 @NgModule({

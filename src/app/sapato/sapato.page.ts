@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProdutosService } from '../services/produtos.service';
 
 @Component({
   selector: 'app-sapato',
@@ -8,15 +9,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SapatoPage implements OnInit {
 
-  constructor( private router: Router ) {}
+  public sapatos: any;
 
-  public dataSapato: any;
+  constructor( public sapatoServ: ProdutosService ) {}
   
   ngOnInit() {
-    fetch('./assets/data/sapato.json')
-      .then(res => res.json())
-      .then(json => {
-        this.dataSapato = json;
-      });
+    // fetch('./assets/data/sapato.json')
+    //   .then(res => res.json())
+    //   .then(json => {
+    //     this.dataSapato = json;
+    //   });
+    this.sapatoServ.getSapatos().subscribe(data => {
+      this.sapatos = data;
+    });
   }
+
+  verSapato(marca: string, rota: string) {
+    this.sapatoServ.goToRota(marca, rota);
+  }
+
 }

@@ -14,20 +14,20 @@
       <ion-label>Filtros</ion-label>
     </ion-button>
   <center><div>
-    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of dataSapato | keyvalue" >
+    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of sapatos | keyvalue" button (onclick)="verSapato(sapato.key, 'sapato')">
       <img [src]="sapato.value.img">
-      <ion-card-header>
+      <ion-card-header (click)="verSapato(sapato.key, 'produto')">
         <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
         <ion-card-subtitle>{{ sapato.value.preco }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <ion-item-divider>
+        <ion-item>
           <!-- Não estão funcionais ainda -->
-        <ion-buttons slot="end">
-          <ion-icon name="heart-outline" slot="end"></ion-icon>
-          <ion-icon name="cart" slot="end"></ion-icon>
+        <ion-buttons>
+          <ion-button (click)="verSapato(sapato.key, 'tab3')"><ion-icon name="heart-outline"></ion-icon></ion-button>
+          <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
         </ion-buttons>
-        </ion-item-divider>
+        </ion-item>
       </ion-card-content>
     </ion-card>
   </div></center>

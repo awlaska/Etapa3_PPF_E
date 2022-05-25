@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Info. Sapato</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card *ngIf="sapato">
+    <ion-card-header>
+      <ion-card-subtitle>{{ sapato.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ sapato.nome }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ sapato.preco }}
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
