@@ -7,30 +7,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>  
-  <center><div>
-<!-- filtros ainda tem de ser implementados -->
-  <ion-button (click)="abrirFiltros()">
-    <ion-icon name="filter"></ion-icon>
-    <ion-label>Filtros</ion-label>
-  </ion-button>
-</div></center>
+<ion-content>
+  <!-- filtros ainda tem de ser implementados -->
+<ion-searchbar placeholder="Pesquisa" [(ngModel)]="searchTerm" showCancelButton="focus" animated></ion-searchbar>
+
 <center><div>
-    <ion-card style="display: inline-block; width: 40%;" *ngFor="let acessorio of dataAcessorio | keyvalue" >
-      <img [src]="acessorio.value.img">
-      <ion-card-header>
-        <ion-card-title>{{ acessorio.value.nome }}</ion-card-title>
-        <ion-card-subtitle>{{ acessorio.value.preco }}</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item-divider>
-          <!-- Não estão funcionais ainda -->
-        <ion-buttons slot="end">
-          <ion-icon name="heart-outline" slot="end"></ion-icon>
-          <ion-icon name="cart" slot="end"></ion-icon>
-        </ion-buttons>
-        </ion-item-divider>
-      </ion-card-content>
-    </ion-card>
-  </div></center>
+  <ion-card style="display: inline-block; width: 40%;" *ngFor="let acessorio of acessorios | keyvalue | filter:searchTerm" button (onclick)="verAcessorio(acessorio.key, 'acessorio')">
+    <img [src]="acessorio.value.img">
+    <ion-card-header (click)="verAcessorio(acessorio.key, 'produto')">
+      <ion-card-title>{{ acessorio.value.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ acessorio.value.preco }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <!-- Não estão funcionais ainda -->
+      <ion-buttons>
+        <ion-button (click)="verAcessorio(acessorio.key, 'tab3')"><ion-icon name="heart-outline"></ion-icon></ion-button>
+        <ion-button (click)="verAcessorio(acessorio.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+      </ion-buttons>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</div></center>
 </ion-content>

@@ -8,12 +8,15 @@ import { CalcaPageRoutingModule } from './calca-routing.module';
 
 import { CalcaPage } from './calca.page';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CalcaPageRoutingModule
+    CalcaPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [CalcaPage]
 })

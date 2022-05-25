@@ -9,24 +9,18 @@ import { ProdutosService } from '../services/produtos.service';
 })
 export class SapatoPage implements OnInit {
 
+  constructor( public sapatoServ: ProdutosService ) {}
+
   public sapatos: any;
   searchTerm: string;
-
-  constructor( public sapatoServ: ProdutosService ) {}
   
   ngOnInit() {
-    // fetch('./assets/data/sapato.json')
-    //   .then(res => res.json())
-    //   .then(json => {
-    //     this.dataSapato = json;
-    //   });
     this.sapatoServ.getSapatos().subscribe(data => {
       this.sapatos = data;
     });
   }
 
   verSapato(marca: string, rota: string) {
-    this.sapatoServ.goToRota(marca, rota);
+    this.sapatoServ.goToRotaSapato(marca, rota);
   }
-
 }

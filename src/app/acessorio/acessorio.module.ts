@@ -8,12 +8,15 @@ import { AcessorioPageRoutingModule } from './acessorio-routing.module';
 
 import { AcessorioPage } from './acessorio.page';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AcessorioPageRoutingModule
+    AcessorioPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [AcessorioPage]
 })

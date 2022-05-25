@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProdutosService } from '../services/produtos.service';
 
 @Component({
   selector: 'app-camisola',
@@ -8,15 +9,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CamisolaPage implements OnInit {
 
-  constructor( private router: Router ) {}
+  constructor( public camisolaServ: ProdutosService ) {}
 
-  public dataCamisola: any;
+  public camisolas: any;
+  searchTerm: string;
   
   ngOnInit() {
-    fetch('./assets/data/camisola.json')
-      .then(res => res.json())
-      .then(json => {
-        this.dataCamisola = json;
-      });
+    this.camisolaServ.getCamisolas().subscribe(data => {
+      this.camisolas = data;
+    });
+  }
+
+  verCamisola(marca: string, rota: string) {
+    this.camisolaServ.goToRotaCamisola(marca, rota);
   }
 }

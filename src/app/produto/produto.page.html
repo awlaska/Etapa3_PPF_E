@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Info. Sapato</ion-title>
+    <ion-title>Info. Produto</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -17,6 +17,17 @@
 
     <ion-card-content>
       {{ sapato.preco }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="camisola">
+    <ion-card-header>
+      <ion-card-subtitle>{{ camisola.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ camisola.nome }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ camisola.preco }}
     </ion-card-content>
   </ion-card>
   

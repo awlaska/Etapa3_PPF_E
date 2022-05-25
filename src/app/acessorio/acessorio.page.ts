@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProdutosService } from '../services/produtos.service';
 
 @Component({
   selector: 'app-acessorio',
@@ -8,15 +9,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AcessorioPage implements OnInit {
 
-  constructor( private router: Router ) {}
+  constructor( public acessorioServ: ProdutosService ) {}
 
-  public dataAcessorio: any;
-  
+  public acessorios: any;
+  searchTerm: string;
+
   ngOnInit() {
-    fetch('./assets/data/acessorio.json')
-      .then(res => res.json())
-      .then(json => {
-        this.dataAcessorio = json;
-      });
+    this.acessorioServ.getAcessorios().subscribe(data => {
+      this.acessorios = data;
+    });
   }
+
+  verAcessorio(marca: string, rota: string) {
+    this.acessorioServ.goToRotaAcessorio(marca, rota);
+  }
+  
 }

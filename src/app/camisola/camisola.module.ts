@@ -8,12 +8,15 @@ import { CamisolaPageRoutingModule } from './camisola-routing.module';
 
 import { CamisolaPage } from './camisola.page';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CamisolaPageRoutingModule
+    CamisolaPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [CamisolaPage]
 })

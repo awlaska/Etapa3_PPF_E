@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProdutosService } from '../services/produtos.service';
 
 @Component({
   selector: 'app-calca',
@@ -8,16 +9,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CalcaPage implements OnInit {
 
-  constructor( private router: Router ) {}
+  constructor( public calcaServ: ProdutosService ) {}
 
-  public dataCalca: any;
+  public calcas: any;
+  searchTerm: string;
   
   ngOnInit() {
-    fetch('./assets/data/calca.json')
-      .then(res => res.json())
-      .then(json => {
-        this.dataCalca = json;
-      });
+    this.calcaServ.getCalcas().subscribe(data => {
+      this.calcas = data;
+    });
   }
+
+  verCalca(marca: string, rota: string) {
+    this.calcaServ.goToRotaCalca(marca, rota);
+  }
+
 }
 
