@@ -9,16 +9,17 @@
 
 <ion-content class="ion-padding">
 
-  <ion-card *ngIf="sapato">
-    <ion-card-header>
-      <ion-card-subtitle>{{ sapato.marca }}</ion-card-subtitle>
-      <ion-card-title>{{ sapato.nome }}</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      {{ sapato.preco }}
-    </ion-card-content>
-  </ion-card>
+  <ion-grid *ngIf="sapato">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>{{ sapato.marca }}</ion-card-subtitle>
+        <ion-card-title>{{ sapato.nome }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ sapato.preco }}
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
 
   <ion-card *ngIf="camisola">
     <ion-card-header>
@@ -52,5 +53,20 @@
       {{ calca.preco }}
     </ion-card-content>
   </ion-card>
+
+  <ion-list>
+    <ion-item>
+      Loja Online: Disponível
+    </ion-item>
+    <ion-item>
+      Loja Viana do Castelo: Esgotado
+    </ion-item>
+    <ion-item>
+      Loja Porto: Disponível
+    </ion-item>
+    <ion-item>
+      Loja Lisboa: Disponível
+    </ion-item>
+  </ion-list>
 
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
 import { ProdutosService } from '../services/produtos.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class ProdutoPage implements OnInit {
   public calca: any;
   public camisola: any;
 
-  constructor(private sapatoServ: ProdutosService, private camisolaServ: ProdutosService, private acessorioServ: ProdutosService, private calcaServ: ProdutosService) { }
+  constructor(public popoverController: PopoverController, private sapatoServ: ProdutosService, private camisolaServ: ProdutosService, private acessorioServ: ProdutosService, private calcaServ: ProdutosService ) { }
 
   ngOnInit() {
     this.sapatoServ.getInfoSapato().subscribe(infoSapato => {
