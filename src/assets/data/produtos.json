@@ -1,0 +1,112 @@
+{
+    "calca1": {
+        "id": "1",
+        "nome": "Calças Pretas",
+        "preco": "9.99€",
+        "img": "./assets/calca/calcaPreta.jpg",
+        "tipo": "Inverno"
+        },
+    "calca2": {
+        "id": "2",
+        "nome": "Calções Adidas",
+        "preco": "15.99€",
+        "img": "./assets/calca/calcaoAdidas.jpg",
+        "tipo": "Verão"
+        },
+    "calca3": {
+        "id": "3",
+        "nome": "Calções Nike Pretos",
+        "preco": "19.99€",
+        "img": "./assets/calca/calcaoNike.jpg",
+        "tipo": "Verão"
+        },
+    "calca4": {
+        "id": "4",
+        "nome": "Calções Nike Cinzentos",
+        "preco": "19.99€",
+        "img": "./assets/calca/calcaoNikeCin.jpg",
+        "tipo": "Verão"
+        },
+
+        
+    "acessorio1": {
+        "id": "1",
+        "nome": "Anel 1",
+        "preco": "2.99€",
+        "img": "./assets/acessorio/anel1.jpg"
+        },
+    "acessorio2": {
+        "id": "2",
+        "nome": "Anel 2",
+        "preco": "4.99€",
+        "img": "./assets/acessorio/anel2.jpg"
+        },
+    "acessorio3": {
+        "id": "3",
+        "nome": "Anel 3",
+        "preco": "1.99€",
+        "img": "./assets/acessorio/anel3.jpg"
+        },
+    "acessorio4": {
+        "id": "4",
+        "nome": "Anel 4",
+        "preco": "5.99€",
+        "img": "./assets/acessorio/anel4.jpg"
+        },
+
+
+        "camisola1": {
+            "id": "1",
+            "nome": "Camisola Laranja",
+            "preco": "9.99€",
+            "img": "./assets/camisola/camisolaLaranja.jpg",
+            "tipo": "Inverno"
+        },
+        "camisola2": {
+            "id": "2",
+            "nome": "Camisola Verde",
+            "preco": "8.99€",
+            "img": "./assets/camisola/camisolaVerde.jpg",
+            "tipo": "Inverno"
+        },
+        "camisola3": {
+            "id": "3",
+            "nome": "Camisola Vans",
+            "preco": "19.99€",
+            "img": "./assets/camisola/camisolaVans.jpg",
+            "tipo": "Verão"
+        },
+        "camisola4": {
+            "id": "4",
+            "nome": "Camisola Fred Perry",
+            "preco": "25.99€",
+            "img": "./assets/camisola/camisolaFred.jpg",
+            "tipo": "Verão"
+        },
+
+        
+        "sapato1": {
+            "id": "1",
+            "nome": "Vans Old Skool Pretas",
+            "preco": "39.99€",
+            "img": "./assets/sapato/sapatoPreto.jpg" 
+            },
+        "sapato2": {
+            "id": "2",
+            "nome": "Vans Old Skool Pretas",
+            "preco": "39.99€",
+            "img": "./assets/sapato/sapatoAdidas.jpg"
+            },
+        "sapato3": {
+            "id": "3",
+            "nome": "Vans Old Skool Pretas",
+            "preco": "39.99€",
+            "img": "./assets/sapato/sapatoNike.jpg"
+            },
+        "sapato4": {
+            "id": "4",
+            "nome": "Vans Old Skool Pretas",
+            "preco": "39.99€",
+            "img": "./assets/sapato/sapatoRebook.jpg"
+            }
+        }

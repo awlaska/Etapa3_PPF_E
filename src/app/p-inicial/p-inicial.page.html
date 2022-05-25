@@ -21,4 +21,26 @@
       <img src="assets/sapato/sapatoNike.jpg" style="width:70%;">
     </ion-slide>
   </ion-slides>
+  
+  <div>
+    <ion-card style="display: inline-block; width: 40%;" *ngFor="let acessorio of dataAcessorio | keyvalue" >
+      <img [src]="acessorio.value.img">
+      <ion-card-header>
+        <ion-card-subtitle>{{ acessorio.value.preco }}</ion-card-subtitle>
+        <ion-card-title>{{ acessorio.value.nome }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item-divider>
+          <!-- Não estão funcionais ainda -->
+        <ion-buttons slot= " ">
+          <ion-icon name="heart-outline" slot="end"></ion-icon>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-icon name="cart" slot="end"></ion-icon>
+        </ion-buttons>
+        </ion-item-divider>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
 </ion-content>
