@@ -135,7 +135,7 @@ export class ProdutosService {
     return new Observable (observer => {
       this.rotaAtiva.queryParams.subscribe(params => {
         if (this.router.getCurrentNavigation().extras.state) {
-          observer.next(this.router.getCurrentNavigation().extras.state.camisolas);
+          observer.next(this.router.getCurrentNavigation().extras.state.camisola);
           observer.complete();
         }
       });
