@@ -12,8 +12,7 @@ export class ProdutosService {
   private acessorios: any;
   private calcas: any;
   private camisolas: any;
-  private produtos: any;
-
+  
   constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
 
   // Sapatos
@@ -136,7 +135,7 @@ export class ProdutosService {
     return new Observable (observer => {
       this.rotaAtiva.queryParams.subscribe(params => {
         if (this.router.getCurrentNavigation().extras.state) {
-          observer.next(this.router.getCurrentNavigation().extras.state.camisolas);
+          observer.next(this.router.getCurrentNavigation().extras.state.camisola);
           observer.complete();
         }
       });
