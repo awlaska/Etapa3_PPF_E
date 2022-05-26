@@ -49,9 +49,10 @@ export class ProdutoPage implements OnInit {
   async openPopover(ev: any){
     const popover = await this.popCtrl.create({
       component: PopoverComponent,
-      event: ev
+      event: ev,
+      cssClass: 'popover'
     })
-    return await popover.present()
+    await popover.present()
   }
 
   tamanho(item:string){
