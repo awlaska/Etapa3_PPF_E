@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { ProdutosService } from '../services/produtos.service';
+import { PopoverComponent } from '../components/popover/popover.component';
 
 @Component({
   selector: 'app-produto',
@@ -15,7 +16,11 @@ export class ProdutoPage implements OnInit {
   public calca: any;
   public camisola: any;
 
-  constructor(public popoverController: PopoverController, private sapatoServ: ProdutosService, private camisolaServ: ProdutosService, private acessorioServ: ProdutosService, private calcaServ: ProdutosService ) { }
+  tamanhos: any = [
+    "28","29","30","31","32","33","34","35"
+  ]
+
+  constructor(public popCtrl: PopoverController, private sapatoServ: ProdutosService, private camisolaServ: ProdutosService, private acessorioServ: ProdutosService, private calcaServ: ProdutosService ) { }
 
   ngOnInit() {
     this.sapatoServ.getInfoSapato().subscribe(infoSapato => {
@@ -31,4 +36,17 @@ export class ProdutoPage implements OnInit {
       this.camisola = infoCamisola;
     })    
   }
+
+  async openPopover(ev: any){
+    const popover = await this.popCtrl.create({
+      component: PopoverComponent,
+      event: ev
+    })
+    return await popover.present()
+  }
+
+  tamanho(item:string){
+    console.log(item)
+  }
+
 }

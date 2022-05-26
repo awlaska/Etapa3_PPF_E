@@ -1,9 +1,9 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Info. Produto</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button (click)='goBack()' defaultHref="/tabs/p-inicial"></ion-back-button>
     </ion-buttons>
+    <ion-title>Info. Produto</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,6 +17,7 @@
       </ion-card-header>
       <ion-card-content>
         {{ sapato.preco }}
+        <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
       </ion-card-content>
     </ion-card>
   </ion-grid>
@@ -29,6 +30,7 @@
 
     <ion-card-content>
       {{ camisola.preco }}
+      <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
     </ion-card-content>
   </ion-card>
   
@@ -40,6 +42,7 @@
 
     <ion-card-content>
       {{ acessorio.preco }}
+      <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
     </ion-card-content>
   </ion-card>
 
@@ -51,22 +54,17 @@
 
     <ion-card-content>
       {{ calca.preco }}
+      <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
     </ion-card-content>
   </ion-card>
 
-  <ion-list>
-    <ion-item>
-      Loja Online: Disponível
-    </ion-item>
-    <ion-item>
-      Loja Viana do Castelo: Esgotado
-    </ion-item>
-    <ion-item>
-      Loja Porto: Disponível
-    </ion-item>
-    <ion-item>
-      Loja Lisboa: Disponível
-    </ion-item>
-  </ion-list>
-
+  <center>
+    <ion-card style="display: inline-block; width: 70%;">
+      <ion-card-title>Tamanhos:</ion-card-title>
+        <ion-card-content>
+          <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button>
+          <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button>
+        </ion-card-content>  
+    </ion-card>
+  </center>
 </ion-content>
