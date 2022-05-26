@@ -1,0 +1,12 @@
+.transparent-modal {
+    --background: #0000005c;
+
+
+    ion-content {
+        --background: transparent;
+    }
+}
+
+ion-modal::part(content) {
+    backdrop-filter: blur(12px);
+}
