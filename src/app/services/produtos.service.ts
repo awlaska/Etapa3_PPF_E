@@ -16,19 +16,6 @@ export class ProdutosService {
 
   constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
 
-  // Produtos
-  getProdutos() {
-    return new Observable (observer => {
-      fetch('./assets/data/produtos.json')
-        .then(resposta => resposta.json())
-        .then(json => {
-          this.produtos = json;
-          observer.next(json);
-          observer.complete();
-        });
-    });
-  }
-
   // Sapatos
 
   getSapatos() {
