@@ -45,6 +45,10 @@ const routes: Routes = [
     path: 'selec-loja',
     loadChildren: () => import('./selec-loja/selec-loja.module').then( m => m.SelecLojaPageModule)
   },
+  {
+    path: 'my-modal',
+    loadChildren: () => import('./components/my-modal/my-modal.module').then( m => m.MyModalPageModule)
+  },
 
 
 
