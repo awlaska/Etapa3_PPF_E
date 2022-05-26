@@ -3,46 +3,63 @@
     <ion-buttons slot="start">
       <ion-back-button (click)='goBack()' defaultHref="/tabs/p-inicial"></ion-back-button>
     </ion-buttons>
-    <ion-title>Info. Produto</ion-title>
+    <center><ion-title>Info. Produto</ion-title></center>
+    <ion-buttons slot="end">
+      <ion-back-button (click)='home()' defaultHref="home()" text="" icon="home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
 
-  <ion-grid *ngIf="sapato">
-    <ion-card>
+    <ion-card *ngIf="sapato">
+      <img [src]="sapato.img">
       <ion-card-header>
         <ion-card-subtitle>{{ sapato.marca }}</ion-card-subtitle>
         <ion-card-title>{{ sapato.nome }}</ion-card-title>
+        {{ sapato.preco }}€
       </ion-card-header>
       <ion-card-content>
-        {{ sapato.preco }}
-        <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+
+        <h1>Tamanhos:</h1>
+        <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button><br><br>
+        <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button><br>
+        <ion-button (click)="verSapato(sapato.key, 'tab2')" expand="block" >Adicionar ao Carrinho</ion-button>
+
       </ion-card-content>
     </ion-card>
-  </ion-grid>
-
+  
   <ion-card *ngIf="camisola">
+    <img [src]="camisola.img">
     <ion-card-header>
       <ion-card-subtitle>{{ camisola.marca }}</ion-card-subtitle>
       <ion-card-title>{{ camisola.nome }}</ion-card-title>
+      {{ camisola.preco }}€
     </ion-card-header>
-
     <ion-card-content>
-      {{ camisola.preco }}
-      <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+
+      <h1>Tamanhos:</h1>
+      <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button><br><br>
+      <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button><br>
+      <ion-button (click)="verCamisola(camisola.key, 'tab2')" expand="block" >Adicionar ao Carrinho</ion-button>
+
     </ion-card-content>
   </ion-card>
-  
+
   <ion-card *ngIf="acessorio">
+    <img [src]="acessorio.img">
     <ion-card-header>
       <ion-card-subtitle>{{ acessorio.marca }}</ion-card-subtitle>
       <ion-card-title>{{ acessorio.nome }}</ion-card-title>
+      {{ acessorio.preco }}€
     </ion-card-header>
-
     <ion-card-content>
-      {{ acessorio.preco }}
-      <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+
+      <h1>Tamanhos:</h1>
+      <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button><br><br>
+      <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button><br>
+      <ion-button (click)="verAcessorio(acessorio.key, 'tab2')" expand="block" >Adicionar ao Carrinho</ion-button>
+
     </ion-card-content>
   </ion-card>
 
@@ -51,20 +68,28 @@
       <ion-card-subtitle>{{ calca.marca }}</ion-card-subtitle>
       <ion-card-title>{{ calca.nome }}</ion-card-title>
     </ion-card-header>
-
     <ion-card-content>
       {{ calca.preco }}
-      <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+      <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button>
+      <ion-button (click)="verCalca(calca.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
     </ion-card-content>
   </ion-card>
 
-  <center>
-    <ion-card style="display: inline-block; width: 70%;">
-      <ion-card-title>Tamanhos:</ion-card-title>
-        <ion-card-content>
-          <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button>
-          <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button>
-        </ion-card-content>  
-    </ion-card>
-  </center>
+  <ion-card *ngIf="calca">
+    <img [src]="calca.img">
+    <ion-card-header>
+      <ion-card-subtitle>{{ calca.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ calca.nome }}</ion-card-title>
+      {{ calca.preco }}€
+    </ion-card-header>
+    <ion-card-content>
+
+      <h1>Tamanhos:</h1>
+      <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button><br><br>
+      <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button><br>
+      <ion-button (click)="verCalca(calca.key, 'tab2')" expand="block" >Adicionar ao Carrinho</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

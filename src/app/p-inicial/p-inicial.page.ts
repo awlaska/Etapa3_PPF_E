@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutosService } from '../services/produtos.service';
-
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-p-inicial',
@@ -9,7 +9,9 @@ import { ProdutosService } from '../services/produtos.service';
 })
 export class PInicialPage implements OnInit {
 
-  constructor( public sapatoServ: ProdutosService , public camisolaServ: ProdutosService ,  public acessorioServ: ProdutosService , public calcaServ: ProdutosService ) { }
+  constructor( private orientacao: ScreenOrientation, public sapatoServ: ProdutosService , public camisolaServ: ProdutosService ,  public acessorioServ: ProdutosService , public calcaServ: ProdutosService ) { 
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
+  }
 
   public sapatos: any;
   public camisolas: any;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router, NavigationExtras } from '@angular/router';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -9,7 +10,9 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class Tab1Page {
 
-  constructor( private navCtrl: NavController, private router: Router ) {}
+  constructor( private orientacao: ScreenOrientation, private navCtrl: NavController, private router: Router ) {
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
+  }
   
   goBack() {
     this.navCtrl.back();
@@ -34,4 +37,9 @@ export class Tab1Page {
         this.router.navigate(['acessorio']);
       }
   }
+
+  home(){
+    this.router.navigate(['/tabs/p-inicial']);
+  }
+  
 }

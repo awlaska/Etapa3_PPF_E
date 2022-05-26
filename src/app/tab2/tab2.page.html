@@ -5,23 +5,54 @@
     </ion-buttons>
     <ion-title style="text-align:center">Carrinho</ion-title>
     <ion-buttons slot="end">
-      <ion-back-button defaultHref="/tabs/p-inicial" text="" icon="home"></ion-back-button>
+      <ion-back-button (click)='home()' defaultHref="home()" text="" icon="home"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-searchbar fullscreen class="ion-padding"></ion-searchbar>
-  <ion-card *ngIf="sapato">
+  <ion-card *ngIf="sapatos">
     <ion-card-header>
-      <ion-card-subtitle>{{ sapato.marca }}</ion-card-subtitle>
-      <ion-card-title>{{ sapato.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ sapatos.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ sapatos.nome }}</ion-card-title>
     </ion-card-header>
-
     <ion-card-content>
-      {{ sapato.preco }}
+      {{ sapatos.preco }}€
     </ion-card-content>
   </ion-card>
 
-  <center><ion-button>Finalizar Compra</ion-button></center>
+  <ion-card *ngIf="camisolas">
+    <ion-card-header>
+      <ion-card-subtitle>{{ camisolas.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ camisolas.nome }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ camisolas.preco }}€
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="calcas">
+    <ion-card-header>
+      <ion-card-subtitle>{{ calcas.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ calcas.nome }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ calcas.preco }}€
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="acessorios">
+    <ion-card-header>
+      <ion-card-subtitle>{{ acessorios.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ acessorios.nome }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ acessorios.preco }}€
+    </ion-card-content>
+  </ion-card>
+
+  <center>
+    <ion-button (click)="selecLoja()">Seleção de Loja</ion-button>
+  </center>
 </ion-content>

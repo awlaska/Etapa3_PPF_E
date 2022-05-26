@@ -4,22 +4,26 @@
       <ion-back-button (click)='goBack()' defaultHref="/tabs/p-inicial"></ion-back-button>
     </ion-buttons>
     <ion-title style="text-align:center">Sapatos</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button (click)='home()' defaultHref="home()" text="" icon="home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-searchbar placeholder="Pesquisa" [(ngModel)]="searchTerm" showCancelButton="focus" animated></ion-searchbar>
-
   <center><div>
-    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of sapatos | keyvalue | filter:searchTerm" button (onclick)="verSapato(sapato.key, 'sapato')">
-      <img [src]="sapato.value.img">
+    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of sapatos | keyvalue | filter:searchTerm">
+      <img [src]="sapato.value.img" (click)="verSapato(sapato.key, 'produto')">
       <ion-card-header (click)="verSapato(sapato.key, 'produto')">
         <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
-        <ion-card-subtitle>{{ sapato.value.preco }}</ion-card-subtitle>
+        <ion-card-subtitle>{{ sapato.value.preco }}€</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
           <ion-button (click)="verSapato(sapato.key, 'tab3')"><ion-icon name="heart-outline"></ion-icon></ion-button>
-      </ion-card-content>
+          <ion-button (click)="verSapato(sapato.key, 'tab2')"><ion-icon name="cart"></ion-icon></ion-button>
+        </ion-card-content>
     </ion-card>
   </div></center>
 </ion-content>
+

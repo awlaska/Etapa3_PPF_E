@@ -12,22 +12,8 @@ export class ProdutosService {
   private acessorios: any;
   private calcas: any;
   private camisolas: any;
-  private produtos: any;
-
+  
   constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
-
-  // Produtos
-  getProdutos() {
-    return new Observable (observer => {
-      fetch('./assets/data/produtos.json')
-        .then(resposta => resposta.json())
-        .then(json => {
-          this.produtos = json;
-          observer.next(json);
-          observer.complete();
-        });
-    });
-  }
 
   // Sapatos
 
@@ -149,7 +135,7 @@ export class ProdutosService {
     return new Observable (observer => {
       this.rotaAtiva.queryParams.subscribe(params => {
         if (this.router.getCurrentNavigation().extras.state) {
-          observer.next(this.router.getCurrentNavigation().extras.state.camisolas);
+          observer.next(this.router.getCurrentNavigation().extras.state.camisola);
           observer.complete();
         }
       });

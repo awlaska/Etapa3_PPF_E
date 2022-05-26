@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-title style="text-align:center">Wishlist</ion-title>
     <ion-buttons slot="end">
-      <ion-back-button defaultHref="/tabs/p-inicial" text="" icon="home"></ion-back-button>
+      <ion-back-button (click)='home()' defaultHref="home()" text="" icon="home"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -13,13 +13,46 @@
 <ion-content>
   <ion-searchbar fullscreen class="ion-padding"></ion-searchbar>
   <ion-card *ngIf="sapato">
+    <img [src]="sapato.img">
     <ion-card-header>
       <ion-card-subtitle>{{ sapato.marca }}</ion-card-subtitle>
       <ion-card-title>{{ sapato.nome }}</ion-card-title>
     </ion-card-header>
-
     <ion-card-content>
-      {{ sapato.preco }}
+      {{ sapato.preco }}€
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="camisola">
+    <img [src]="camisola.img">
+    <ion-card-header>
+      <ion-card-subtitle>{{ camisola.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ camisola.nome }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ camisola.preco }}€
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="calca">
+    <img [src]="calca.img">
+    <ion-card-header>
+      <ion-card-subtitle>{{ calca.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ calca.nome }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ calca.preco }}€
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="acessorio">
+    <img [src]="acessorio.img">
+    <ion-card-header>
+      <ion-card-subtitle>{{ acessorio.marca }}</ion-card-subtitle>
+      <ion-card-title>{{ acessorio.nome }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ acessorio.preco }}€
     </ion-card-content>
   </ion-card>
 </ion-content>
