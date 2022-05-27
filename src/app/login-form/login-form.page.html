@@ -21,12 +21,12 @@
     </ion-text>
  
     <ion-item lines="full" *ngIf="showpassword">
-      <ion-label position="floating" color="primary">Password</ion-label>
+      <ion-label position="floating">Password</ion-label>
       <ion-icon slot="end" color="primary" name="eye" (click)="togglePasswordText()"></ion-icon>
       <ion-input type="text" formControlName="password" class="form-controll" required></ion-input>
     </ion-item>
     <ion-item lines="full" *ngIf="!showpassword">
-      <ion-label position="floating" color="primary">Password</ion-label>
+      <ion-label position="floating">Password</ion-label>
       <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
       <ion-icon slot="end" color="medium" name="eye-off" (click)="togglePasswordText()"></ion-icon>
     </ion-item>

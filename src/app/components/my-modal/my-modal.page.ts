@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ProdutosService } from 'src/app/services/produtos.service';
 import { Router } from '@angular/router';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-my-modal',
@@ -11,7 +12,9 @@ import { Router } from '@angular/router';
 
 export class MyModalPage implements OnInit {
 
-  constructor( private modalCtrl: ModalController,  private route: Router, public sapatoServ: ProdutosService) { }
+  constructor( private orientacao: ScreenOrientation, private modalCtrl: ModalController,  private route: Router, public sapatoServ: ProdutosService) {
+    this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
+  }
 
   public sapatos: any;
 
