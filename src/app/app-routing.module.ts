@@ -49,6 +49,10 @@ const routes: Routes = [
     path: 'my-modal',
     loadChildren: () => import('./components/my-modal/my-modal.module').then( m => m.MyModalPageModule)
   },
+  {
+    path: 'login-form',
+    loadChildren: () => import('./login-form/login-form.module').then( m => m.LoginFormPageModule)
+  },
 
 
 

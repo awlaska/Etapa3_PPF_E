@@ -37,7 +37,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/p-inicial',
+    redirectTo: '/login-form',
     pathMatch: 'full'
   }
 ];

@@ -20,7 +20,7 @@ export class ProdutoPage implements OnInit {
   public calca: any;
 
   tamanhos: any = [
-    "26","27","28","29","30","31","32","33","34","35","36"
+    "26","27","28","29","30","31","32","33","34","35"
   ]
 
   constructor( private orientacao: ScreenOrientation, private route: Router, private navCtrl: NavController, public popCtrl: PopoverController, private sapatoServ: ProdutosService, private camisolaServ: ProdutosService, private acessorioServ: ProdutosService, private calcaServ: ProdutosService ) { 
