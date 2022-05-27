@@ -14,13 +14,14 @@
   <ion-searchbar fullscreen class="ion-padding"></ion-searchbar>
   <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="sapatos">
     <img [src]="sapatos.img">
-    <ion-card-header>
+    <ion-card-header style="color: rgb(0, 0, 0);">
       <ion-card-title>{{ sapatos.nome }}</ion-card-title>
-      <ion-card-subtitle>{{ sapatos.marca }}</ion-card-subtitle>
+      <ion-card-subtitle>{{ sapatos.cor }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      {{ sapatos.preco }}
-      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+      <h2 style="color: rgb(0, 0, 0);">{{ sapatos.preco }}</h2>
+      <br>
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219); margin-bottom: 10px; border-radius: 10px;">
         <ion-item>
           <ion-label>Tamanho:</ion-label>
           <ion-select value="tamanho">
@@ -38,13 +39,15 @@
   </ion-card>
 
   <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="camisolas">
-    <ion-card-header>
+    <img [src]="camisolas.img">
+    <ion-card-header style="color: rgb(0, 0, 0);">
       <ion-card-title>{{ camisolas.nome }}</ion-card-title>
-      <ion-card-subtitle>{{ camisolas.marca }}</ion-card-subtitle>
+      <ion-card-subtitle>{{ camisolas.cor }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      {{ camisolas.preco }}
-      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+      <h2 style="color: rgb(0, 0, 0);">{{ camisolas.preco }}</h2>
+      <br>
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219); margin-bottom: 10px; border-radius: 10px;">
         <ion-item>
           <ion-label>Tamanho:</ion-label>
           <ion-select value="tamanho">
@@ -60,13 +63,15 @@
   </ion-card>
 
   <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="calcas">
+    <img [src]="calcas.img">
     <ion-card-header>
       <ion-card-title>{{ calcas.nome }}</ion-card-title>
-      <ion-card-subtitle>{{ calcas.marca }}</ion-card-subtitle>
+      <ion-card-subtitle>{{ calcas.cor }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      {{ calcas.preco }}
-      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+      <h2 style="color: rgb(0, 0, 0);">{{ calcas.preco }}</h2>
+      <br>
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219); margin-bottom: 10px; border-radius: 10px;">
         <ion-item>
           <ion-label>Tamanho:</ion-label>
           <ion-select value="tamanho">
@@ -82,13 +87,15 @@
   </ion-card>
 
   <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="acessorios">
+    <img [src]="acessorios.img">
     <ion-card-header>
       <ion-card-title>{{ acessorios.nome }}</ion-card-title>
       <ion-card-subtitle>{{ acessorios.marca }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      {{ acessorios.preco }}
-      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+      <h2 style="color: rgb(0, 0, 0);">{{ acessorios.preco }}</h2>
+      <br>
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219); margin-bottom: 10px; border-radius: 10px;">
         <ion-item>
           <ion-label>Tamanho:</ion-label>
           <ion-select value="tamanho">
