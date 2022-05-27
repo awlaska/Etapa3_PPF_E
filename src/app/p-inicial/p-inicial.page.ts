@@ -9,6 +9,14 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 })
 export class PInicialPage implements OnInit {
 
+  slideOpts = {
+    speed: 300,
+    loop: true,
+    autoplay: {
+          delay: 2000
+    }
+  };
+
   constructor( private orientacao: ScreenOrientation, public sapatoServ: ProdutosService , public camisolaServ: ProdutosService ,  public acessorioServ: ProdutosService , public calcaServ: ProdutosService ) { 
     this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
   }

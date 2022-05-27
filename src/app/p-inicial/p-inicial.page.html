@@ -7,18 +7,27 @@
 <ion-content>
   <ion-searchbar placeholder="Pesquisa" [(ngModel)]="searchTerm" showCancelButton="focus" animated></ion-searchbar>
 
-  <ion-slides color="dark" #slider pager="true" [options]="slideOpts" (ionSlideDidChange)='ionSlideDidChange()'>
+  <ion-slides color="dark" #slider pager="true" [options]="slideOpts">
     <ion-slide>
-      <img src="assets/acessorio/anel2.jpg" style="width:60%;">
+      <img src="assets/acessorio/anel2.jpg" alt=”slide-1” style="width:70%;">
     </ion-slide>
     <ion-slide>
-      <img src="assets/calca/calcaoAdidas.jpg" style="width:60%;">
+      <img src="assets/camisola/camisolaFred.jpg" alt=”slide-3” style="width:70%;">
     </ion-slide>
     <ion-slide>
-      <img src="assets/camisola/camisolaFred.jpg" style="width:60%;">
+      <img src="assets/sapato/sapatoNike.jpg" alt=”slide-4” style="width:70%;">
     </ion-slide>
     <ion-slide>
-      <img src="assets/sapato/sapatoNike.jpg" style="width:60%;">
+      <img src="assets/acessorio/anel3.jpg" alt=”slide-5” style="width:70%;">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/calca/calcaPreta.jpg" alt=”slide-6” style="width:70%;">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/camisola/camisolaVans.jpg" alt=”slide-7” style="width:70%;">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/sapato/sapatoAdidas.jpg" alt=”slide-7” style="width:70%;">
     </ion-slide>
   </ion-slides>
 
