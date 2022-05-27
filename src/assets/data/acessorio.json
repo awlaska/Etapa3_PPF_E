@@ -1,12 +1,12 @@
 {
-"acessorio1": {
+"acessorio2": {
     "id": "1",
     "nome": "Anel Familia FM",
     "preco": "2.99€",
     "img": "./assets/acessorio/anel1.jpg",
     "marca": "Zippy"
     },
-"acessorio2": {
+"acessorio1": {
     "id": "2",
     "nome": "Anel Urso",
     "preco": "4.99€",

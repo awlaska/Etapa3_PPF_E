@@ -58,3 +58,22 @@
     }
 }
 
+ion-button {
+    --ion-background-color: rgb(79, 128, 218);
+}
+
+ion-toolbar {
+    --ion-background-color: rgb(79, 128, 218);
+    --ion-text-color: white;
+}
+
+ion-tab-bar {
+    --ion-background-color: rgb(79, 128, 218);
+    --ion-text-color: white;
+    --ion-icon-color: white;
+}
+
+ion-tab-button {
+    // Icon and text
+    --ion-color-base: white;
+}

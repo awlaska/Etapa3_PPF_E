@@ -23,7 +23,7 @@
   </ion-slides>
 
   <center><div>
-    <ion-card style="display: inline-block; width: 40%;" *ngFor="let sapato of sapatos | keyvalue | filter:searchTerm" button (onclick)="verSapato(sapato.key, 'sapato')">
+    <ion-card style="display: inline-block; width: 40%; background-color: rgba(128, 128, 128, 0.219);" *ngFor="let sapato of sapatos | keyvalue | filter:searchTerm" button (onclick)="verSapato(sapato.key, 'sapato')">
       <img [src]="sapato.value.img" (click)="verSapato(sapato.key, 'produto')">
       <ion-card-header (click)="verSapato(sapato.key, 'produto')">
         <ion-card-title>{{ sapato.value.nome }}</ion-card-title>
@@ -31,7 +31,7 @@
       </ion-card-header>
     </ion-card>
     
-    <ion-card style="display: inline-block; width: 40%;" *ngFor="let camisola of camisolas | keyvalue | filter:searchTerm" button (onclick)="verCamisola(camisola.key, 'camisola')">
+    <ion-card style="display: inline-block; width: 40%; background-color: rgba(128, 128, 128, 0.219);" *ngFor="let camisola of camisolas | keyvalue | filter:searchTerm" button (onclick)="verCamisola(camisola.key, 'camisola')">
       <img [src]="camisola.value.img" (click)="verCamisola(camisola.key, 'produto')">
       <ion-card-header (click)="verCamisola(camisola.key, 'produto')">
         <ion-card-title>{{ camisola.value.nome }}</ion-card-title>
@@ -39,7 +39,7 @@
       </ion-card-header>
     </ion-card>
 
-    <ion-card style="display: inline-block; width: 40%;" *ngFor="let acessorio of acessorios | keyvalue | filter:searchTerm" button (onclick)="verAcessorio(acessorio.key, 'acessorio')">
+    <ion-card style="display: inline-block; width: 40%; background-color: rgba(128, 128, 128, 0.219);" *ngFor="let acessorio of acessorios | keyvalue | filter:searchTerm" button (onclick)="verAcessorio(acessorio.key, 'acessorio')">
       <img [src]="acessorio.value.img" (click)="verAcessorio(acessorio.key, 'produto')">
       <ion-card-header (click)="verAcessorio(acessorio.key, 'produto')">
         <ion-card-title>{{ acessorio.value.nome }}</ion-card-title>
@@ -47,7 +47,7 @@
       </ion-card-header>
     </ion-card>
 
-    <ion-card style="display: inline-block; width: 40%;" *ngFor="let calca of calcas | keyvalue | filter:searchTerm" button (onclick)="verCalca(calca.key, 'calca')">
+    <ion-card style="display: inline-block; width: 40%; background-color: rgba(128, 128, 128, 0.219);" *ngFor="let calca of calcas | keyvalue | filter:searchTerm" button (onclick)="verCalca(calca.key, 'calca')">
       <img [src]="calca.value.img" (click)="verCalca(calca.key, 'produto')">
       <ion-card-header (click)="verCalca(calca.key, 'produto')">
         <ion-card-title>{{ calca.value.nome }}</ion-card-title>

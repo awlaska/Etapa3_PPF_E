@@ -41,13 +41,10 @@ const routes: Routes = [
   {
     path: 'produto',
     loadChildren: () => import('./produto/produto.module').then( m => m.ProdutoPageModule)
-  },  {
-    path: 'selec-loja',
-    loadChildren: () => import('./selec-loja/selec-loja.module').then( m => m.SelecLojaPageModule)
   },
   {
-    path: 'my-modal',
-    loadChildren: () => import('./components/my-modal/my-modal.module').then( m => m.MyModalPageModule)
+    path: 'selec-loja',
+    loadChildren: () => import('./selec-loja/selec-loja.module').then( m => m.SelecLojaPageModule)
   },
   {
     path: 'login-form',

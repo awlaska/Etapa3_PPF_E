@@ -13,7 +13,7 @@
 <ion-content>
   <form [formGroup]="LojaForm" (ngSubmit)="submitForm()" novalidate>
   <center><div>
-    <ion-card style="display: inline-block; width: 80%;">
+    <ion-card style="display: inline-block; width: 80%; background-color: rgba(128, 128, 128, 0.219);">
       <ion-card-header>
         <ion-card-title>
           Lojas
@@ -21,7 +21,7 @@
       </ion-card-header>
       <ion-card-content>
         <ion-list>
-          <ion-radio-group formControlName="loja">
+          <ion-radio-group formControlName="loja" >
             <ion-item>
               <ion-label>Loja Online</ion-label>
               <ion-radio slot="start" color="tertiary" value="online"></ion-radio>

@@ -71,6 +71,7 @@ export class ProdutoPage implements OnInit {
   verAcessorio(marca: string, rota: string) {
     this.acessorioServ.goToRotaAcessorio(marca, rota);
   }
+
   home(){
     this.route.navigate(['/tabs/p-inicial']);
   }

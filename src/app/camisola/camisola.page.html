@@ -13,7 +13,7 @@
 <ion-content>
   <ion-searchbar placeholder="Pesquisa" [(ngModel)]="searchTerm" showCancelButton="focus" animated></ion-searchbar>
   <center><div>
-    <ion-card style="display: inline-block; width: 40%;" *ngFor="let camisola of camisolas | keyvalue | filter:searchTerm">
+    <ion-card style="display: inline-block; width: 40%; background-color: rgba(128, 128, 128, 0.219);" *ngFor="let camisola of camisolas | keyvalue | filter:searchTerm">
       <img [src]="camisola.value.img" (click)="verCamisola(camisola.key, 'produto')">
       <ion-card-header (click)="verCamisola(camisola.key, 'produto')">
         <ion-card-title>{{ camisola.value.nome }}</ion-card-title>

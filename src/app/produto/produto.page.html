@@ -12,58 +12,93 @@
 
 <ion-content class="ion-padding">
 
-    <ion-card *ngIf="sapato">
+    <ion-card style=" background-color: rgba(128, 128, 128, 0.219);"  *ngIf="sapato">
       <img [src]="sapato.img">
       <ion-card-header>
         <ion-card-subtitle>{{ sapato.marca }}</ion-card-subtitle>
         <ion-card-title>{{ sapato.nome }}</ion-card-title>
-        {{ sapato.preco }}€
+        {{ sapato.preco }}
       </ion-card-header>
       <ion-card-content>
-
-        <h1>Tamanhos:</h1>
-        <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button><br><br>
+        <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+          <ion-item>
+            <ion-label>Tamanho:</ion-label>
+            <ion-select value="tamanho">
+              <ion-select-option value="26">26</ion-select-option>
+              <ion-select-option value="27">27</ion-select-option>
+              <ion-select-option value="27">28</ion-select-option>
+              <ion-select-option value="27">29</ion-select-option>
+              <ion-select-option value="27">30</ion-select-option>
+              <ion-select-option value="27">31</ion-select-option>
+              <ion-select-option value="27">32</ion-select-option>
+              <ion-select-option value="27">33</ion-select-option>
+              <ion-select-option value="27">34</ion-select-option>
+              <ion-select-option value="27">35</ion-select-option>
+              <ion-select-option value="27">36</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list><br>
         <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button><br>
         <ion-button (click)="verSapato(sapato.key, 'tab2')" expand="block" >Adicionar ao Carrinho</ion-button>
 
       </ion-card-content>
     </ion-card>
   
-  <ion-card *ngIf="camisola">
+  <ion-card style=" background-color: rgba(128, 128, 128, 0.219);"  *ngIf="camisola">
     <img [src]="camisola.img">
     <ion-card-header>
       <ion-card-subtitle>{{ camisola.marca }}</ion-card-subtitle>
       <ion-card-title>{{ camisola.nome }}</ion-card-title>
-      {{ camisola.preco }}€
+      {{ camisola.preco }}
     </ion-card-header>
     <ion-card-content>
 
-      <h1>Tamanhos:</h1>
-      <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button><br><br>
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+        <ion-item>
+          <ion-label>Tamanho:</ion-label>
+          <ion-select value="tamanho">
+            <ion-select-option value="XS">XS</ion-select-option>
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="L">L</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list><br>
       <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button><br>
       <ion-button (click)="verCamisola(camisola.key, 'tab2')" expand="block" >Adicionar ao Carrinho</ion-button>
 
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="acessorio">
+  <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="acessorio">
     <img [src]="acessorio.img">
     <ion-card-header>
       <ion-card-subtitle>{{ acessorio.marca }}</ion-card-subtitle>
       <ion-card-title>{{ acessorio.nome }}</ion-card-title>
-      {{ acessorio.preco }}€
+      {{ acessorio.preco }}
     </ion-card-header>
     <ion-card-content>
 
-      <h1>Tamanhos:</h1>
-      <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button><br><br>
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+        <ion-item>
+          <ion-label>Tamanho:</ion-label>
+          <ion-select value="tamanho">
+            <ion-select-option value="XS">XS</ion-select-option>
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="L">L</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list><br>
       <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button><br>
       <ion-button (click)="verAcessorio(acessorio.key, 'tab2')" expand="block" >Adicionar ao Carrinho</ion-button>
 
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="calca">
+  <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="calca">
     <ion-card-header>
       <ion-card-subtitle>{{ calca.marca }}</ion-card-subtitle>
       <ion-card-title>{{ calca.nome }}</ion-card-title>
@@ -75,17 +110,27 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="calca">
+  <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="calca">
     <img [src]="calca.img">
     <ion-card-header>
       <ion-card-subtitle>{{ calca.marca }}</ion-card-subtitle>
       <ion-card-title>{{ calca.nome }}</ion-card-title>
-      {{ calca.preco }}€
+      {{ calca.preco }}
     </ion-card-header>
     <ion-card-content>
 
-      <h1>Tamanhos:</h1>
-      <ion-button (click)="tamanho(item)" *ngFor="let item of tamanhos">{{item}}</ion-button><br><br>
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+        <ion-item>
+          <ion-label>Tamanho:</ion-label>
+          <ion-select value="tamanho">
+            <ion-select-option value="XS">XS</ion-select-option>
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="L">L</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list><br>
       <ion-button (click)="openPopover($event)" expand="block" >Disponibilidade</ion-button><br>
       <ion-button (click)="verCalca(calca.key, 'tab2')" expand="block" >Adicionar ao Carrinho</ion-button>
 

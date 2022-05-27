@@ -12,47 +12,98 @@
 
 <ion-content>
   <ion-searchbar fullscreen class="ion-padding"></ion-searchbar>
-  <ion-card *ngIf="sapatos">
+  <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="sapatos">
+    <img [src]="sapatos.img">
     <ion-card-header>
-      <ion-card-subtitle>{{ sapatos.marca }}</ion-card-subtitle>
       <ion-card-title>{{ sapatos.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ sapatos.marca }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      {{ sapatos.preco }}€
+      {{ sapatos.preco }}
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+        <ion-item>
+          <ion-label>Tamanho:</ion-label>
+          <ion-select value="tamanho">
+            <ion-select-option value="26">26</ion-select-option>
+            <ion-select-option value="27">27</ion-select-option>
+            <ion-select-option value="28">28</ion-select-option>
+            <ion-select-option value="29">29</ion-select-option>
+            <ion-select-option value="30">30</ion-select-option>
+            <ion-select-option value="31">31</ion-select-option>
+            <ion-select-option value="32">32</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list><br>
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="camisolas">
+  <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="camisolas">
     <ion-card-header>
-      <ion-card-subtitle>{{ camisolas.marca }}</ion-card-subtitle>
       <ion-card-title>{{ camisolas.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ camisolas.marca }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      {{ camisolas.preco }}€
+      {{ camisolas.preco }}
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+        <ion-item>
+          <ion-label>Tamanho:</ion-label>
+          <ion-select value="tamanho">
+            <ion-select-option value="XS">XS</ion-select-option>
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="L">L</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list><br>
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="calcas">
+  <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="calcas">
     <ion-card-header>
-      <ion-card-subtitle>{{ calcas.marca }}</ion-card-subtitle>
       <ion-card-title>{{ calcas.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ calcas.marca }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      {{ calcas.preco }}€
+      {{ calcas.preco }}
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+        <ion-item>
+          <ion-label>Tamanho:</ion-label>
+          <ion-select value="tamanho">
+            <ion-select-option value="XS">XS</ion-select-option>
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="L">L</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list><br>
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="acessorios">
+  <ion-card style=" background-color: rgba(128, 128, 128, 0.219);" *ngIf="acessorios">
     <ion-card-header>
-      <ion-card-subtitle>{{ acessorios.marca }}</ion-card-subtitle>
       <ion-card-title>{{ acessorios.nome }}</ion-card-title>
+      <ion-card-subtitle>{{ acessorios.marca }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      {{ acessorios.preco }}€
+      {{ acessorios.preco }}
+      <ion-list style=" background-color: rgba(128, 128, 128, 0.219);">
+        <ion-item>
+          <ion-label>Tamanho:</ion-label>
+          <ion-select value="tamanho">
+            <ion-select-option value="XS">XS</ion-select-option>
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="L">L</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list><br>
     </ion-card-content>
   </ion-card>
 
   <center>
-    <ion-button (click)="selecLoja()">Seleção de Loja</ion-button>
+    <ion-button (click)="selecLoja()">Finalizar e escolher loja</ion-button>
   </center>
 </ion-content>

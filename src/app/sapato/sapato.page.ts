@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutosService } from '../services/produtos.service';
 import { ModalController, NavController } from '@ionic/angular';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import { MyModalPage } from '../components/my-modal/my-modal.page';
 
 @Component({
   selector: 'app-sapato',
@@ -12,7 +11,7 @@ import { MyModalPage } from '../components/my-modal/my-modal.page';
 })
 export class SapatoPage implements OnInit {
 
-  constructor( private modalCtrl: ModalController, private orientacao: ScreenOrientation, private route: Router, private navCtrl: NavController, public sapatoServ: ProdutosService ) {
+  constructor( private orientacao: ScreenOrientation, private route: Router, private navCtrl: NavController, public sapatoServ: ProdutosService ) {
     this.orientacao.lock(this.orientacao.ORIENTATIONS.PORTRAIT);
   }
 
@@ -35,14 +34,6 @@ export class SapatoPage implements OnInit {
 
   home(){
     this.route.navigate(['/tabs/p-inicial']);
-  }
-
-  async openModal(){
-    const modal = await this.modalCtrl.create({
-      component: MyModalPage,
-      cssClass: 'transparent-modal'
-    });
-    await modal.present();
   }
   
 }
