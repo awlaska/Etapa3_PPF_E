@@ -11,6 +11,7 @@
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="LojaForm" (ngSubmit)="submitForm()" novalidate>
   <center><div>
     <ion-card style="display: inline-block; width: 80%;">
       <ion-card-header>
@@ -20,7 +21,7 @@
       </ion-card-header>
       <ion-card-content>
         <ion-list>
-          <ion-radio-group value=" ">
+          <ion-radio-group formControlName="loja">
             <ion-item>
               <ion-label>Loja Online</ion-label>
               <ion-radio slot="start" color="tertiary" value="online"></ion-radio>
@@ -36,11 +37,14 @@
               <ion-radio slot="start" color="tertiary" value="lisboa"></ion-radio>
             </ion-item>
           </ion-radio-group>
+          <ion-text class="ion-padding" color="danger" *ngIf="isSubmitted && formControls.loja.errors?.required">
+            Loja é de seleção obrigatória
+          </ion-text>
         </ion-list>
-        <br>
-          <ion-button (click)="finalizar()">Finalizar</ion-button>
-        <ion-button>Cancelar</ion-button>
+          <ion-button type="submit" >Finalizar</ion-button>
+          <ion-button>Cancelar</ion-button>
       </ion-card-content>
     </ion-card>
   </div></center>
+</form>
 </ion-content>
