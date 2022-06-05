@@ -46,6 +46,7 @@ export class ProdutoPage implements OnInit {
     }) 
   }
 
+  // retorna valor quando evento acontecer
   async openPopover(ev: any){
     const popover = await this.popCtrl.create({
       component: PopoverComponent,
